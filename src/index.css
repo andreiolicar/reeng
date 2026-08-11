@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-100: #e7eaf0;
+  --color-brand-600: #40506a;
+  --color-brand-700: #30415c;
+  --color-brand-900: #18263f;
+  --color-brand-950: #101a2b;
+  --color-graphite: #29313d;
+  --color-muted: #66707e;
+  --color-line: #dde1e7;
+  --color-canvas: #f7f8fa;
+  --font-sans: "Aptos", "Segoe UI", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: var(--color-graphite);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--color-brand-100);
+  color: var(--color-brand-900);
+}
+
+.projects-marquee {
+  overflow: hidden;
+}
+
+.projects-marquee__track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: projects-marquee 52s linear infinite;
+  will-change: transform;
+}
+
+.projects-marquee:is(:hover, :focus-within) .projects-marquee__track {
+  animation-play-state: paused;
+}
+
+.project-card__image,
+.project-card__caption,
+.project-card__corner-arrow,
+.project-card__hover {
+  transition: 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card__image {
+  transition-duration: 700ms;
+}
+
+.project-card__hover {
+  opacity: 0;
+}
+
+.project-card:is(:hover, :focus-visible) .project-card__image {
+  transform: scale(1.045);
+}
+
+.project-card:is(:hover, :focus-visible) .project-card__caption,
+.project-card:is(:hover, :focus-visible) .project-card__corner-arrow {
+  opacity: 0;
+  transform: translateY(0.75rem);
+}
+
+.project-card:is(:hover, :focus-visible) .project-card__hover {
+  opacity: 1;
+}
+
+@keyframes projects-marquee {
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-enabled [data-reveal] {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-enabled [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .projects-marquee {
+    overflow-x: auto;
+  }
+
+  .projects-marquee__track {
+    animation: none;
+  }
+}
