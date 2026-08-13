@@ -14,17 +14,17 @@ function Header() {
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white">
+    <header className="sticky top-0 z-50 border-b border-line bg-white" data-reveal="fade-down">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:h-20 lg:px-10">
         <a
           href="#inicio"
           className="flex items-center"
-          aria-label="REENG Engenharia Consultiva — início"
+          aria-label="REENGE Engenharia Consultiva — início"
           onClick={closeMenu}
         >
           <img
             src={reengBlueLogo}
-            alt="REENG Engenharia Consultiva"
+            alt="REENGE Engenharia Consultiva"
             className="h-10 w-auto sm:h-11"
           />
         </a>
@@ -41,7 +41,7 @@ function Header() {
           ))}
           <a
             href="#contato"
-            className="border border-brand-900 px-5 py-2.5 text-sm font-semibold text-brand-900 transition-all duration-200 hover:-translate-y-px hover:bg-brand-900 hover:text-white"
+            className="rounded-xl border border-brand-900 px-5 py-2.5 text-sm font-semibold text-brand-900 transition-all duration-200 hover:-translate-y-px hover:bg-brand-900 hover:text-white"
           >
             Contato
           </a>
@@ -88,7 +88,7 @@ function Header() {
             ))}
             <a
               href="#contato"
-              className="mt-5 bg-brand-900 px-5 py-3.5 text-center text-sm font-semibold text-white"
+              className="mt-5 rounded-xl bg-brand-900 px-5 py-3.5 text-center text-sm font-semibold text-white"
               onClick={closeMenu}
             >
               Contato

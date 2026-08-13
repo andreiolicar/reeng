@@ -5,7 +5,7 @@ import Services from './components/Services'
 import Methodology from './components/Methodology'
 import Differentials from './components/Differentials'
 import Experience from './components/Experience'
-import Contact from './components/Contact'
+import PreFooter from './components/PreFooter'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import ScrollReveal from './components/ScrollReveal'
@@ -22,7 +22,7 @@ function App() {
         <Methodology />
         <Differentials />
         <Experience />
-        <Contact />
+        <PreFooter />
       </main>
       <Footer />
       <WhatsAppButton />

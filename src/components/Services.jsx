@@ -6,7 +6,7 @@ const primaryServices = [
   {
     icon: LuNetwork,
     image: managementImage,
-    imageAlt: 'Vista aérea de empreendimento do acervo institucional da REENG',
+    imageAlt: 'Vista aérea de empreendimento do acervo institucional da REENGE',
     title: 'Gerenciamento e Coordenação de Projetos',
     description:
       'Integração entre disciplinas, coordenação técnica e acompanhamento do desenvolvimento dos projetos.',
@@ -14,7 +14,7 @@ const primaryServices = [
   {
     icon: LuClipboardCheck,
     image: atpImage,
-    imageAlt: 'Levantamento aéreo com marcações técnicas do acervo institucional da REENG',
+    imageAlt: 'Levantamento aéreo com marcações técnicas do acervo institucional da REENGE',
     title: 'ATP — Análise Técnica de Projetos',
     description:
       'Avaliação técnica independente, verificando conformidade normativa, consistência das soluções e oportunidades de melhoria antes da execução.',
@@ -45,15 +45,15 @@ const complementaryServices = [
 function Services() {
   return (
     <section id="servicos" className="scroll-mt-20 bg-canvas py-20 sm:py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10" data-reveal>
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
-          <div className="lg:order-2 lg:col-span-3 lg:col-start-10 lg:justify-self-end">
+          <div className="lg:order-2 lg:col-span-3 lg:col-start-10 lg:justify-self-end" data-reveal="from-right">
             <p className="text-xs font-semibold tracking-[0.16em] text-brand-700 uppercase">
               Serviços
             </p>
           </div>
 
-          <div className="lg:order-1 lg:col-span-8 lg:col-start-1">
+          <div className="lg:order-1 lg:col-span-8 lg:col-start-1" data-reveal>
             <h2 className="max-w-4xl text-4xl leading-[1.08] font-semibold tracking-[-0.035em] text-brand-900 sm:text-5xl lg:text-6xl">
               Engenharia consultiva em cada decisão relevante.
             </h2>
@@ -63,10 +63,11 @@ function Services() {
           </div>
         </div>
 
-        <div className="mt-14 grid border-y border-brand-900 sm:mt-18 lg:mt-24 lg:grid-cols-2">
+        <div className="mt-14 grid overflow-hidden rounded-[1.25rem] border border-brand-900 sm:mt-18 lg:mt-24 lg:grid-cols-2" data-reveal="stagger">
           {primaryServices.map((service, index) => (
             <article
               key={service.title}
+              data-reveal-item
               className={`group relative isolate flex min-h-[28rem] flex-col overflow-hidden bg-brand-900 px-7 py-8 sm:min-h-[30rem] sm:px-9 sm:py-10 lg:min-h-[34rem] lg:px-11 lg:py-11 ${
                 index === 0
                   ? 'border-b border-white/30 lg:border-r lg:border-b-0'
@@ -102,14 +103,15 @@ function Services() {
           ))}
         </div>
 
-        <div className="mt-14 sm:mt-18 lg:mt-20">
+        <div className="mt-14 sm:mt-18 lg:mt-20" data-reveal>
           <p className="mb-5 text-[0.68rem] font-semibold tracking-[0.16em] text-muted uppercase">
             Serviços complementares
           </p>
-          <div className="border-t border-line">
+          <div className="border-t border-line" data-reveal="stagger">
             {complementaryServices.map((service) => (
               <article
                 key={service.title}
+                data-reveal-item
                 className="group grid gap-3 border-b border-line py-7 transition-colors hover:border-brand-600 sm:grid-cols-[3rem_minmax(0,0.9fr)_minmax(0,1.1fr)] sm:items-start sm:gap-7 sm:py-8 lg:grid-cols-[4rem_minmax(18rem,0.85fr)_minmax(0,1.15fr)]"
               >
                 <service.icon
