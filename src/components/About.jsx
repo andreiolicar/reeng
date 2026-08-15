@@ -33,7 +33,7 @@ function About() {
             </h2>
             <div className="mt-7 max-w-xl space-y-4 text-base leading-7 text-muted sm:text-lg sm:leading-8">
               <p>
-                A REENGE atua como parceira técnica de incorporadores, investidores e empreendedores imobiliários, oferecendo análises, coordenação e consultoria especializada.
+                A REENG atua como parceira técnica de incorporadores, investidores e empreendedores imobiliários, oferecendo análises, coordenação e consultoria especializada.
               </p>
               <p>
                 O trabalho apoia decisões mais seguras, promove a integração dos projetos e contribui para reduzir riscos e agregar valor aos empreendimentos.
@@ -44,14 +44,14 @@ function About() {
           <figure className="relative order-2 aspect-[16/10] overflow-hidden rounded-[1.25rem] bg-brand-100 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:aspect-auto lg:min-h-[34rem]" data-reveal="image">
             <img
               src={aboutImage}
-              alt="Vista aérea de empreendimento do acervo institucional da REENGE"
+              alt="Vista aérea de empreendimento do acervo institucional da REENG"
               width="1280"
               height="720"
               className="size-full object-cover"
               loading="lazy"
             />
             <div className="absolute inset-y-0 left-0 w-2 bg-brand-900 sm:w-3" aria-hidden="true" />
-            <figcaption className="sr-only">Fotografia do acervo institucional da REENGE.</figcaption>
+            <figcaption className="sr-only">Fotografia do acervo institucional da REENG.</figcaption>
           </figure>
 
           <div className="order-3 self-end border-t border-brand-600 pt-6 lg:col-start-2 lg:row-start-2" data-reveal="from-right">
@@ -77,7 +77,7 @@ function About() {
 
             <div className="space-y-5 text-base leading-7 text-muted sm:text-lg sm:leading-8 lg:col-span-7 lg:col-start-6" data-reveal="from-right">
               <p>
-                Com mais de 40 anos de experiência em engenharia, Walter Ferreira atua como Sócio e Responsável Técnico da REENGE Engenharia Consultiva, reunindo experiência prática de campo e visão estratégica de empreendimento.
+                Com mais de 40 anos de experiência em engenharia, Walter Ferreira atua como Sócio e Responsável Técnico da REENG Engenharia Consultiva, reunindo experiência prática de campo e visão estratégica de empreendimento.
               </p>
               <p>
                 Sua trajetória abrange obras hospitalares, infraestrutura, habitação, edifícios residenciais e sistemas construtivos industrializados, com atuação voltada à análise crítica, coordenação técnica, planejamento e apoio à tomada de decisões mais seguras.
