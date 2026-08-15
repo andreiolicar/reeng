@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reengBlueLogo from '../assets/reeng-blue-web.png'
+import reengBlueLogo from '../assets/branding/reeng-wordmark-blue.png'
 
 const navigation = [
   { label: 'Início', href: '#inicio' },
@@ -19,15 +19,15 @@ function Header() {
         <a
           href="#inicio"
           className="flex items-center"
-          aria-label="REENG Engenharia Consultiva — início"
+          aria-label="REENG — início"
           onClick={closeMenu}
         >
           <img
             src={reengBlueLogo}
-            alt="REENG Engenharia Consultiva"
-            width="600"
-            height="185"
-            className="h-10 w-auto sm:h-11"
+            alt="REENG"
+            width="640"
+            height="150"
+            className="h-8 w-auto sm:h-9 lg:h-[2.625rem]"
           />
         </a>
 
@@ -43,7 +43,7 @@ function Header() {
           ))}
           <a
             href="#contato"
-            className="rounded-xl border border-brand-900 px-5 py-2.5 text-sm font-semibold text-brand-900 transition-all duration-200 hover:-translate-y-px hover:bg-brand-900 hover:text-white"
+            className="inline-flex h-[2.625rem] items-center rounded-xl border border-brand-900 px-5 text-sm font-semibold text-brand-900 transition-all duration-200 hover:-translate-y-px hover:bg-brand-900 hover:text-white"
           >
             Contato
           </a>

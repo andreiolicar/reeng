@@ -1,20 +1,24 @@
-import { LuBuilding2, LuClipboardCheck, LuMap, LuMessagesSquare, LuNetwork } from 'react-icons/lu'
-import atpImage from '../assets/experiencia-levantamento-aereo-reeng.jpeg'
-import managementImage from '../assets/reeng-visao-integrada-empreendimento.jpeg'
+import { LuArrowRight, LuBuilding2, LuClipboardCheck, LuHandshake, LuMap, LuMessagesSquare, LuNetwork } from 'react-icons/lu'
+import atpImage from '../assets/services/analise-tecnica-projetos-atp-reeng.jpg'
+import managementImage from '../assets/services/gerenciamento-coordenacao-projetos-reeng.jpeg'
 
 const primaryServices = [
   {
     icon: LuNetwork,
     image: managementImage,
-    imageAlt: 'Vista aérea de empreendimento do acervo institucional da REENG',
+    imageAlt: 'Vista aérea de edificação hospitalar em contexto urbano',
+    imageWidth: 500,
+    imageHeight: 494,
     title: 'Gerenciamento e Coordenação de Projetos',
     description:
-      'Integração entre disciplinas, coordenação técnica e acompanhamento do desenvolvimento dos projetos.',
+      'Integração entre disciplinas, coordenação técnica e acompanhamento contínuo do desenvolvimento, promovendo compatibilização, apoio à execução e redução de inconsistências entre os projetos.',
   },
   {
     icon: LuClipboardCheck,
     image: atpImage,
-    imageAlt: 'Levantamento aéreo com marcações técnicas do acervo institucional da REENG',
+    imageAlt: 'Modelo estrutural tridimensional de edifício em concreto armado',
+    imageWidth: 1339,
+    imageHeight: 1037,
     title: 'ATP — Análise Técnica de Projetos',
     description:
       'Avaliação técnica independente dos projetos, com verificação de conformidade normativa — incluindo os requisitos da ABNT NBR 6118:2026 —, consistência das soluções e oportunidades de melhoria antes da execução.',
@@ -30,15 +34,15 @@ const complementaryServices = [
   },
   {
     icon: LuBuilding2,
-    title: 'Assessoria à Incorporação Imobiliária',
+    title: 'Incorporação Imobiliária',
     description:
-      'Suporte técnico ao desenvolvimento do empreendimento, desde os estudos iniciais até a coordenação dos projetos.',
+      'Assessoria técnica a incorporações de terceiros e participação no desenvolvimento de incorporações próprias ou em parceria com investidores e empreendedores.',
   },
   {
     icon: LuMap,
     title: 'Desenvolvimento de Loteamentos',
     description:
-      'Consultoria técnica para planejamento, coordenação e implantação de empreendimentos urbanísticos.',
+      'Consultoria e assessoria a terceiros, além do desenvolvimento de loteamentos em parceria com investidores, empreendedores ou proprietários de terrenos.',
   },
 ]
 
@@ -77,6 +81,8 @@ function Services() {
               <img
                 src={service.image}
                 alt={service.imageAlt}
+                width={service.imageWidth}
+                height={service.imageHeight}
                 className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out motion-safe:lg:group-hover:scale-[1.035]"
                 loading="lazy"
                 decoding="async"
@@ -90,11 +96,7 @@ function Services() {
                   <h3 className="max-w-lg text-3xl leading-tight font-semibold tracking-[-0.025em] text-white sm:text-4xl">
                     {service.title}
                   </h3>
-                  <p
-                    className={`mt-6 max-w-xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8 ${
-                      index === 0 ? 'sm:max-w-[25rem]' : ''
-                    }`}
-                  >
+                  <p className="mt-6 max-w-xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
                     {service.description}
                   </p>
                 </div>
@@ -123,6 +125,54 @@ function Services() {
               </article>
             ))}
           </div>
+
+          <aside
+            className="group relative isolate mt-10 overflow-hidden rounded-[1.25rem] bg-brand-900 px-6 py-9 text-white sm:px-9 sm:py-11 lg:px-12 lg:py-12"
+            aria-labelledby="partnership-cta-title"
+            data-reveal
+          >
+            <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+              <span className="absolute -top-28 right-16 size-72 rounded-full border border-white/[0.07]" />
+              <span className="absolute top-0 right-24 h-full w-px bg-white/[0.06]" />
+              <span className="absolute top-1/2 right-0 h-px w-72 bg-white/[0.06]" />
+            </div>
+
+            <div className="grid gap-9 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-14">
+              <div className="max-w-3xl">
+                <p className="text-xs font-semibold tracking-[0.16em] text-white/60 uppercase">
+                  Parcerias e novos negócios
+                </p>
+                <h3
+                  id="partnership-cta-title"
+                  className="mt-4 max-w-2xl text-3xl leading-tight font-semibold tracking-[-0.025em] text-white sm:text-4xl"
+                >
+                  Tem um terreno ou oportunidade de incorporação?
+                </h3>
+                <p className="mt-5 max-w-3xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+                  A REENG avalia projetos para desenvolvimento em parceria com proprietários de terrenos, investidores e empreendedores, incluindo incorporações imobiliárias e loteamentos.
+                </p>
+                <p className="mt-5 text-sm leading-6 font-medium text-white/65">
+                  Incorporações imobiliárias <span aria-hidden="true">•</span> Loteamentos <span aria-hidden="true">•</span> Parcerias com investidores
+                </p>
+              </div>
+
+              <div className="flex flex-col items-start gap-5 lg:min-w-[16rem] lg:items-end">
+                <span
+                  className="grid size-12 place-items-center rounded-xl border border-white/20 bg-white/10 text-white transition-transform duration-300 motion-safe:group-hover:-translate-y-1"
+                  aria-hidden="true"
+                >
+                  <LuHandshake className="size-6" />
+                </span>
+                <a
+                  href="#contato"
+                  className="inline-flex min-h-12 items-center justify-center gap-3 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-brand-900 transition-all duration-200 hover:-translate-y-px hover:bg-brand-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transform-none"
+                >
+                  Apresente sua oportunidade
+                  <LuArrowRight className="size-4 shrink-0 transition-transform duration-200 motion-safe:group-hover:translate-x-0.5" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>

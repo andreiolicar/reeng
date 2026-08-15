@@ -1,4 +1,4 @@
-import reengBlueLogo from '../assets/reeng-blue-web.png'
+import reengBlueLogo from '../assets/branding/reeng-wordmark-blue.png'
 import { LuMail, LuMapPin, LuPhone } from 'react-icons/lu'
 
 const footerNavigation = [
@@ -18,13 +18,13 @@ function Footer() {
       <div className="site-container pt-12 pb-24 sm:pt-14 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[minmax(16rem,1.15fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-14" data-reveal="stagger">
           <div data-reveal-item>
-            <a href="#inicio" className="inline-flex items-center" aria-label="REENG Engenharia Consultiva — início">
+            <a href="#inicio" className="inline-flex items-center" aria-label="REENG — início">
               <img
                 src={reengBlueLogo}
-                alt="REENG Engenharia Consultiva"
-                width="600"
-                height="185"
-                className="h-12 w-auto sm:h-14"
+                alt="REENG"
+                width="640"
+                height="150"
+                className="h-10 w-auto sm:h-11"
               />
             </a>
             <p className="mt-5 max-w-xs text-sm leading-6 text-muted">
@@ -94,7 +94,7 @@ function Footer() {
           </nav>
 
           <p className="text-xs text-muted">
-            © {currentYear} REENG Engenharia Consultiva. Todos os direitos reservados.
+            © {currentYear} REENG Projetos e Obras Limitadas. Todos os direitos reservados.
           </p>
         </div>
       </div>

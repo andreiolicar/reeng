@@ -63,12 +63,13 @@ const projects = [
     aspect: 'aspect-[4/3]',
   },
   {
-    title: 'Estudos territoriais e implantação urbana',
+    title: 'Residencial Morada do Bosque',
     category: 'Leitura territorial',
     image: territorialStudyImage,
-    imageAlt: 'Vista aérea de área urbana e área verde para estudo de implantação',
+    imageAlt: 'Vista aérea do Residencial Morada do Bosque e seu entorno urbano',
     layout: 'sm:col-span-2 lg:col-span-3',
     aspect: 'aspect-[16/10] sm:aspect-[16/7]',
+    imageClassName: 'object-[18%_82%] sm:object-[15%_88%]',
   },
 ]
 
@@ -80,7 +81,7 @@ function ProjectCard({ project }) {
       <img
         src={project.image}
         alt={project.imageAlt}
-        className="experience-project__image absolute inset-0 size-full object-cover"
+        className={`experience-project__image absolute inset-0 size-full object-cover ${project.imageClassName ?? ''}`}
         loading="lazy"
         decoding="async"
       />
