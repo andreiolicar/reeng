@@ -19,8 +19,8 @@ const differentials = [
 
 function Differentials() {
   return (
-    <section id="diferenciais" className="scroll-mt-20 bg-white py-20 sm:py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <section id="diferenciais" className="scroll-mt-24 bg-white py-20 sm:py-24 lg:py-28">
+      <div className="site-container">
         <div className="text-center" data-reveal>
           <p className="text-xs font-semibold tracking-[0.16em] text-brand-700 uppercase">
             Diferenciais
@@ -47,6 +47,8 @@ function Differentials() {
                 <img
                   src={differential.image}
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                   className="size-10 object-contain"
                 />
               </span>

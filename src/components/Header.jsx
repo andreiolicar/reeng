@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reengBlueLogo from '../assets/reenge-blue.png'
+import reengBlueLogo from '../assets/reeng-blue-web.png'
 
 const navigation = [
   { label: 'Início', href: '#inicio' },
@@ -15,16 +15,18 @@ function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white" data-reveal="fade-down">
-      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:h-20 lg:px-10">
+      <div className="site-container flex h-18 items-center justify-between lg:h-20">
         <a
           href="#inicio"
           className="flex items-center"
-          aria-label="REENGE Engenharia Consultiva — início"
+          aria-label="REENG Engenharia Consultiva — início"
           onClick={closeMenu}
         >
           <img
             src={reengBlueLogo}
-            alt="REENGE Engenharia Consultiva"
+            alt="REENG Engenharia Consultiva"
+            width="600"
+            height="185"
             className="h-10 w-auto sm:h-11"
           />
         </a>
@@ -72,10 +74,10 @@ function Header() {
       {isMenuOpen && (
         <nav
           id="mobile-navigation"
-          className="border-t border-line bg-white px-5 py-5 sm:px-8 lg:hidden"
+          className="border-t border-line bg-white py-5 lg:hidden"
           aria-label="Navegação mobile"
         >
-          <div className="mx-auto flex max-w-7xl flex-col">
+          <div className="site-container flex flex-col">
             {navigation.map((item) => (
               <a
                 key={item.href}

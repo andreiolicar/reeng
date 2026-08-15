@@ -1,4 +1,4 @@
-import reengBlueLogo from '../assets/reenge-blue.png'
+import reengBlueLogo from '../assets/reeng-blue-web.png'
 import { LuMail, LuMapPin, LuPhone } from 'react-icons/lu'
 
 const footerNavigation = [
@@ -14,14 +14,16 @@ function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer id="contato" className="scroll-mt-20 border-t border-line bg-white text-brand-900">
-      <div className="mx-auto max-w-7xl px-5 pt-12 pb-24 sm:px-8 sm:pt-14 lg:px-10 lg:py-16">
+    <footer id="contato" className="scroll-mt-24 border-t border-line bg-white text-brand-900">
+      <div className="site-container pt-12 pb-24 sm:pt-14 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[minmax(16rem,1.15fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-14" data-reveal="stagger">
           <div data-reveal-item>
-            <a href="#inicio" className="inline-flex items-center" aria-label="REENGE Engenharia Consultiva — início">
+            <a href="#inicio" className="inline-flex items-center" aria-label="REENG Engenharia Consultiva — início">
               <img
                 src={reengBlueLogo}
-                alt="REENGE Engenharia Consultiva"
+                alt="REENG Engenharia Consultiva"
+                width="600"
+                height="185"
                 className="h-12 w-auto sm:h-14"
               />
             </a>
@@ -58,10 +60,7 @@ function Footer() {
                   <LuPhone className="size-4" aria-hidden="true" />
                 </span>
                 <div className="flex flex-col gap-1.5 pt-0.5">
-                  <a href="tel:+5519993057300" className="transition-colors hover:text-brand-700">
-                    19 99305-7300
-                  </a>
-                  <a href="tel:+5511959664121" className="transition-colors hover:text-brand-700">
+                  <a href="tel:+5511959664121" className="inline-flex min-h-10 items-center transition-colors hover:text-brand-700">
                     11 95966-4121
                   </a>
                 </div>
@@ -72,7 +71,7 @@ function Footer() {
                 </span>
                 <a
                   href="mailto:walter@projetoseobras.com.br"
-                  className="min-w-0 break-all pt-2 transition-colors hover:text-brand-700"
+                  className="inline-flex min-h-10 min-w-0 items-center break-all transition-colors hover:text-brand-700"
                 >
                   walter@projetoseobras.com.br
                 </a>
@@ -86,7 +85,7 @@ function Footer() {
             <ul className="flex flex-wrap gap-x-6 gap-y-3">
               {footerNavigation.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="text-xs font-medium text-muted transition-colors hover:text-brand-900">
+                  <a href={item.href} className="inline-flex min-h-10 items-center text-xs font-medium text-muted transition-colors hover:text-brand-900">
                     {item.label}
                   </a>
                 </li>
@@ -95,7 +94,7 @@ function Footer() {
           </nav>
 
           <p className="text-xs text-muted">
-            © {currentYear} REENGE Engenharia Consultiva. Todos os direitos reservados.
+            © {currentYear} REENG Engenharia Consultiva. Todos os direitos reservados.
           </p>
         </div>
       </div>

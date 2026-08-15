@@ -1,145 +1,160 @@
-import projectImage01 from '../assets/projects/projeto-provisorio-01.jpeg'
-import projectImage02 from '../assets/projects/projeto-provisorio-02.jpeg'
-import projectImage03 from '../assets/projects/projeto-provisorio-03.jpeg'
-import projectImage04 from '../assets/projects/projeto-provisorio-04.jpeg'
-import projectImage05 from '../assets/projects/projeto-provisorio-05.jpeg'
-import projectImage06 from '../assets/projects/projeto-provisorio-06.jpeg'
-import projectImage07 from '../assets/projects/projeto-provisorio-07.jpeg'
+import residentialCommonAreaImage from '../assets/projects/area-comum-empreendimento-residencial.jpg'
+import nossoTetoImage from '../assets/projects/conjunto-habitacional-nosso-teto-braganca-paulista.jpg'
+import hospitalAerialImage from '../assets/projects/edificacao-hospitalar-vista-aerea.jpg'
+import residentialImage from '../assets/projects/empreendimento-residencial-multifamiliar.jpg'
+import territorialStudyImage from '../assets/projects/estudos-territoriais-implantacao-urbana.jpg'
+import hospitalFacadeImage from '../assets/projects/fachada-edificacao-hospitalar.jpg'
+import sportsInfrastructureImage from '../assets/projects/infraestrutura-esportiva-ginasio.jpg'
+import hospitalRenderImage from '../assets/projects/projeto-edificacao-hospitalar-render-arquitetonico.jpg'
+
+const featuredProject = {
+  title: 'Conjunto Habitacional Nosso Teto, Bragança Paulista',
+  category: 'Experiência documentada',
+  description:
+    'Empreendimento habitacional com 900 casas. Após o terceiro mês de execução, a obra alcançou ritmo de seis casas por dia, apoiado pela fabricação de blocos e outros elementos pré-moldados no próprio canteiro.',
+  image: nossoTetoImage,
+  imageAlt: 'Vista aérea do Conjunto Habitacional Nosso Teto em Bragança Paulista',
+}
 
 const projects = [
   {
-    title: 'Projeto 01',
-    category: 'Imagem provisória',
-    image: projectImage01,
-    imageAlt: 'Edifício residencial contemporâneo com varandas',
+    title: 'Empreendimento residencial multifamiliar',
+    category: 'Edificação residencial',
+    image: residentialImage,
+    imageAlt: 'Torres de empreendimento residencial multifamiliar vistas a partir da rua',
+    layout: 'sm:col-span-2 lg:col-span-2',
+    aspect: 'aspect-[16/10]',
   },
   {
-    title: 'Projeto 02',
-    category: 'Imagem provisória',
-    image: projectImage02,
-    imageAlt: 'Edifício contemporâneo em fase de construção',
+    title: 'Área comum de empreendimento residencial',
+    category: 'Espaços de convivência',
+    image: residentialCommonAreaImage,
+    imageAlt: 'Área comum com playground em empreendimento residencial multifamiliar',
+    layout: 'lg:row-span-2',
+    aspect: 'aspect-[4/5]',
   },
   {
-    title: 'Projeto 03',
-    category: 'Imagem provisória',
-    image: projectImage03,
-    imageAlt: 'Empreendimento contemporâneo com fachada envidraçada',
+    title: 'Projeto de edificação hospitalar',
+    category: 'Estudo arquitetônico',
+    image: hospitalRenderImage,
+    imageAlt: 'Render arquitetônico de edificação hospitalar',
+    aspect: 'aspect-[4/3]',
   },
   {
-    title: 'Projeto 04',
-    category: 'Imagem provisória',
-    image: projectImage04,
-    imageAlt: 'Estrutura vertical em execução com equipamentos de obra',
+    title: 'Fachada de edificação hospitalar',
+    category: 'Infraestrutura hospitalar',
+    image: hospitalFacadeImage,
+    imageAlt: 'Fachada de edificação hospitalar com acesso principal',
+    aspect: 'aspect-[4/3]',
   },
   {
-    title: 'Projeto 05',
-    category: 'Imagem provisória',
-    image: projectImage05,
-    imageAlt: 'Edifício em execução envolvido por andaimes',
+    title: 'Edificação hospitalar em contexto urbano',
+    category: 'Implantação urbana',
+    image: hospitalAerialImage,
+    imageAlt: 'Vista aérea de edificação hospitalar em área urbana',
+    layout: 'lg:col-span-2',
+    aspect: 'aspect-[4/3]',
   },
   {
-    title: 'Projeto 06',
-    category: 'Imagem provisória',
-    image: projectImage06,
-    imageAlt: 'Estrutura de edifício em construção sob céu azul',
+    title: 'Infraestrutura esportiva',
+    category: 'Equipamento de uso coletivo',
+    image: sportsInfrastructureImage,
+    imageAlt: 'Interior de ginásio coberto com quadra esportiva',
+    aspect: 'aspect-[4/3]',
   },
   {
-    title: 'Projeto 07',
-    category: 'Imagem provisória',
-    image: projectImage07,
-    imageAlt: 'Obra vertical com estrutura metálica e guindaste',
+    title: 'Estudos territoriais e implantação urbana',
+    category: 'Leitura territorial',
+    image: territorialStudyImage,
+    imageAlt: 'Vista aérea de área urbana e área verde para estudo de implantação',
+    layout: 'sm:col-span-2 lg:col-span-3',
+    aspect: 'aspect-[16/10] sm:aspect-[16/7]',
   },
 ]
 
-const projectColumns = [
-  { layout: 'tall', projects: [projects[0]] },
-  { layout: 'tall', projects: [projects[1]] },
-  { layout: 'stacked', projects: [projects[2], projects[3]] },
-  { layout: 'tall', projects: [projects[4]] },
-  { layout: 'stacked', projects: [projects[5], projects[6]] },
-]
-
-const heightClasses = {
-  tall: 'h-[32rem] sm:h-[36rem]',
-  compact: 'h-[13rem] sm:h-[14rem]',
-  medium: 'h-[17.5rem] sm:h-[20.5rem]',
-}
-
-function ProjectCard({ project, size, duplicate }) {
+function ProjectCard({ project }) {
   return (
     <article
-      className={`project-card group relative isolate overflow-hidden rounded-[1.25rem] bg-brand-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600 ${heightClasses[size]}`}
-      tabIndex={duplicate ? -1 : 0}
+      className={`experience-project group relative isolate overflow-hidden rounded-[1.25rem] bg-brand-900 lg:h-full lg:aspect-auto ${project.layout ?? ''} ${project.aspect}`}
     >
       <img
         src={project.image}
-        alt={duplicate ? '' : project.imageAlt}
-        className="project-card__image absolute inset-0 size-full object-cover"
+        alt={project.imageAlt}
+        className="experience-project__image absolute inset-0 size-full object-cover"
         loading="lazy"
         decoding="async"
       />
-      <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/15 to-transparent" aria-hidden="true" />
-
-      <div className="project-card__caption absolute inset-x-5 bottom-5 z-10 text-white sm:inset-x-6 sm:bottom-6">
-        <h3 className="text-2xl leading-tight font-semibold tracking-[-0.025em]">{project.title}</h3>
-        <p className="mt-1 text-sm leading-5 text-white/75 sm:text-base">{project.category}</p>
-      </div>
-
-      <div className="project-card__hover absolute inset-0 z-20 flex flex-col items-center justify-center bg-brand-900/92 px-6 text-center text-white">
-        <h3 className="text-2xl leading-tight font-semibold tracking-[-0.025em] sm:text-3xl">{project.title}</h3>
-        <p className="mt-2 text-sm text-white/75 sm:text-base">{project.category}</p>
+      <div
+        className="absolute inset-0 bg-linear-to-t from-brand-950/90 via-brand-900/10 to-transparent"
+        aria-hidden="true"
+      />
+      <div className="experience-project__content absolute inset-x-5 bottom-5 z-10 text-white sm:inset-x-6 sm:bottom-6">
+        <p className="text-[0.68rem] font-semibold tracking-[0.14em] text-white/70 uppercase">
+          {project.category}
+        </p>
+        <h3 className="mt-2 max-w-md text-2xl leading-tight font-semibold tracking-[-0.025em]">
+          {project.title}
+        </h3>
       </div>
     </article>
   )
 }
 
-function ProjectGroup({ duplicate = false }) {
-  return (
-    <div className="projects-marquee__group flex shrink-0 gap-4 sm:gap-6" aria-hidden={duplicate || undefined}>
-      {projectColumns.map((column, columnIndex) => (
-        <div
-          key={`${column.layout}-${columnIndex}`}
-          className="w-[78vw] max-w-[21.5rem] shrink-0 sm:w-[21.5rem] lg:w-[23rem] lg:max-w-none"
-        >
-          {column.layout === 'tall' ? (
-            <ProjectCard project={column.projects[0]} size="tall" duplicate={duplicate} />
-          ) : (
-            <div className="grid gap-4 sm:gap-6">
-              <ProjectCard project={column.projects[0]} size="compact" duplicate={duplicate} />
-              <ProjectCard project={column.projects[1]} size="medium" duplicate={duplicate} />
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  )
-}
-
 function Experience() {
   return (
-    <section
-      id="experiencia"
-      className="scroll-mt-20 overflow-hidden bg-canvas pt-20 pb-0 sm:pt-24 lg:pt-32"
-    >
-      <div className="mx-auto max-w-7xl px-5 text-center sm:px-8 lg:px-10" data-reveal>
-        <p className="text-xs font-semibold tracking-[0.16em] text-brand-700 uppercase">
-          Experiência aplicada em cada projeto
-        </p>
-        <h2 className="mx-auto mt-5 max-w-4xl text-4xl leading-[1.08] font-semibold tracking-[-0.035em] text-brand-900 sm:text-5xl lg:text-6xl">
-          Projetos que traduzem conhecimento técnico em prática.
-        </h2>
-        <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-muted">
-          Uma composição dinâmica para apresentar diferentes escalas de empreendimento e a atuação técnica da REENGE ao longo de seu desenvolvimento.
-        </p>
-      </div>
+    <section id="experiencia" className="scroll-mt-24 bg-canvas pt-20 pb-0 sm:pt-24 lg:pt-28">
+      <div className="site-container">
+        <div className="text-center" data-reveal>
+          <p className="text-xs font-semibold tracking-[0.16em] text-brand-700 uppercase">
+            Experiência aplicada em cada projeto
+          </p>
+          <h2 className="mx-auto mt-5 max-w-4xl text-4xl leading-[1.08] font-semibold tracking-[-0.035em] text-brand-900 sm:text-5xl lg:text-6xl">
+            Projetos que traduzem conhecimento técnico em prática.
+          </h2>
+          <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-muted">
+            Registros de diferentes escalas e aplicações da engenharia, apresentados com a clareza técnica que orienta a atuação da REENG.
+          </p>
+        </div>
 
-      <div className="projects-marquee mt-14 sm:mt-18 lg:mt-24" aria-label="Galeria contínua de projetos" data-reveal="fade">
-        <div className="projects-marquee__track">
-          <ProjectGroup />
-          <ProjectGroup duplicate />
+        <article
+          className="experience-project group mt-14 grid overflow-hidden rounded-[1.25rem] bg-brand-900 text-white sm:mt-18 lg:mt-24 lg:grid-cols-[minmax(0,1.45fr)_minmax(20rem,0.55fr)]"
+          data-reveal="image"
+        >
+          <div className="relative min-h-80 overflow-hidden sm:min-h-[28rem] lg:min-h-[32rem]">
+            <img
+              src={featuredProject.image}
+              alt={featuredProject.imageAlt}
+              className="experience-project__image absolute inset-0 size-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div
+              className="absolute inset-0 bg-linear-to-t from-brand-950/90 via-brand-900/25 to-transparent"
+              aria-hidden="true"
+            />
+            <div className="experience-project__content absolute inset-x-7 bottom-7 z-10 sm:inset-x-10 sm:bottom-10 lg:inset-x-12 lg:bottom-12">
+              <h3 className="max-w-2xl text-3xl leading-tight font-semibold tracking-[-0.03em] sm:text-4xl">
+                {featuredProject.title}
+              </h3>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center px-7 py-9 sm:px-10 sm:py-12 lg:px-12">
+            <p className="text-xs font-semibold tracking-[0.16em] text-white/65 uppercase">
+              {featuredProject.category}
+            </p>
+            <p className="mt-6 text-base leading-7 text-white/78 sm:text-lg sm:leading-8">
+              {featuredProject.description}
+            </p>
+          </div>
+        </article>
+
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:auto-rows-[20rem] lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
         </div>
       </div>
-
     </section>
   )
 }

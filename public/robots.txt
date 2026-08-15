@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reeng.com.br/sitemap.xml

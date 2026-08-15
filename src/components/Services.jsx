@@ -6,7 +6,7 @@ const primaryServices = [
   {
     icon: LuNetwork,
     image: managementImage,
-    imageAlt: 'Vista aérea de empreendimento do acervo institucional da REENGE',
+    imageAlt: 'Vista aérea de empreendimento do acervo institucional da REENG',
     title: 'Gerenciamento e Coordenação de Projetos',
     description:
       'Integração entre disciplinas, coordenação técnica e acompanhamento do desenvolvimento dos projetos.',
@@ -14,10 +14,10 @@ const primaryServices = [
   {
     icon: LuClipboardCheck,
     image: atpImage,
-    imageAlt: 'Levantamento aéreo com marcações técnicas do acervo institucional da REENGE',
+    imageAlt: 'Levantamento aéreo com marcações técnicas do acervo institucional da REENG',
     title: 'ATP — Análise Técnica de Projetos',
     description:
-      'Avaliação técnica independente, verificando conformidade normativa, consistência das soluções e oportunidades de melhoria antes da execução.',
+      'Avaliação técnica independente dos projetos, com verificação de conformidade normativa — incluindo os requisitos da ABNT NBR 6118:2026 —, consistência das soluções e oportunidades de melhoria antes da execução.',
   },
 ]
 
@@ -44,8 +44,8 @@ const complementaryServices = [
 
 function Services() {
   return (
-    <section id="servicos" className="scroll-mt-20 bg-canvas py-20 sm:py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <section id="servicos" className="scroll-mt-24 bg-canvas py-20 sm:py-24 lg:py-28">
+      <div className="site-container">
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:order-2 lg:col-span-3 lg:col-start-10 lg:justify-self-end" data-reveal="from-right">
             <p className="text-xs font-semibold tracking-[0.16em] text-brand-700 uppercase">

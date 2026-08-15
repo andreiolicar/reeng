@@ -28,8 +28,8 @@ const steps = [
 
 function Methodology() {
   return (
-    <section id="metodologia" className="scroll-mt-20 bg-brand-900 py-20 text-white sm:py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <section id="metodologia" className="scroll-mt-24 bg-brand-900 py-20 text-white sm:py-24 lg:py-28">
+      <div className="site-container">
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:order-2 lg:col-span-3 lg:col-start-10 lg:justify-self-end" data-reveal="from-right">
             <p className="text-xs font-semibold tracking-[0.16em] text-brand-100 uppercase">
@@ -47,22 +47,22 @@ function Methodology() {
           </div>
         </div>
 
-        <ol className="mt-14 border-t border-white/30 sm:mt-18 lg:mt-24 lg:grid lg:grid-cols-5" data-reveal="stagger">
+        <ol className="mt-14 border-t border-white/30 sm:mt-18 xl:mt-24 xl:grid xl:grid-cols-5" data-reveal="stagger">
           {steps.map((step) => (
             <li
               key={step.title}
               data-reveal-item
-              className="grid grid-cols-[2.75rem_minmax(0,1fr)] gap-4 border-b border-white/20 py-8 transition-colors hover:bg-white/[0.03] lg:block lg:border-r lg:border-b-0 lg:px-6 lg:py-10 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+              className="grid grid-cols-[2.75rem_minmax(0,1fr)] gap-4 border-b border-white/20 py-8 transition-colors hover:bg-white/[0.03] xl:block xl:border-r xl:border-b-0 xl:px-6 xl:py-10 xl:first:pl-0 xl:last:border-r-0 xl:last:pr-0"
             >
               <span
-                className="text-4xl leading-none font-semibold tracking-[-0.04em] text-white/20 lg:block lg:text-6xl"
+                className="text-4xl leading-none font-semibold tracking-[-0.04em] text-white/20 xl:block xl:text-6xl"
                 aria-hidden="true"
               >
                 {step.initial}
               </span>
               <div>
-                <h3 className="text-2xl font-semibold tracking-[-0.02em] lg:mt-7">{step.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-white/65 lg:mt-5 lg:text-base lg:leading-7">
+                <h3 className="text-2xl font-semibold tracking-[-0.02em] xl:mt-7">{step.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/65 xl:mt-5 xl:text-base xl:leading-7">
                   {step.description}
                 </p>
               </div>
