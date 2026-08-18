@@ -4,7 +4,7 @@ import { FiBookOpen, FiHome, FiMapPin, FiShield } from 'react-icons/fi'
 
 const credentials = [
   {
-    title: '+40 anos',
+    title: '+45 anos',
     description: 'Experiência em engenharia',
   },
   {
@@ -95,7 +95,7 @@ function About() {
 
             <div className="space-y-5 text-base leading-7 text-muted sm:text-lg sm:leading-8 lg:col-span-7 lg:col-start-6" data-reveal="from-right">
               <p>
-                Com mais de 40 anos de experiência em engenharia, Walter Ferreira atua como Sócio e Responsável Técnico da REENG Projetos e Obras Limitadas, reunindo experiência prática de campo e visão estratégica de empreendimento.
+                Com mais de 45 anos de experiência em engenharia, Walter Ferreira atua como Sócio e Responsável Técnico da REENG Projetos e Obras Limitadas, reunindo experiência prática de campo e visão estratégica de empreendimento.
               </p>
               <p>
                 Sua trajetória abrange obras hospitalares, infraestrutura, habitação, edifícios residenciais e sistemas construtivos industrializados, com atuação voltada à análise crítica, coordenação técnica, planejamento e apoio à tomada de decisões mais seguras.
