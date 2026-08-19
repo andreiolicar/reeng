@@ -4,7 +4,7 @@ import { LuArrowRight, LuBuilding2, LuClipboardCheck, LuNetwork } from 'react-ic
 const specialties = [
   { icon: LuNetwork, label: 'Gerenciamento e Coordenação de Projetos' },
   { icon: LuClipboardCheck, label: 'ATP — Análise Técnica de Projetos' },
-  { icon: LuBuilding2, label: 'Corporações Imobiliárias' },
+  { icon: LuBuilding2, label: 'Incorporações Imobiliárias' },
 ]
 
 function Hero() {

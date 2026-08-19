@@ -1,87 +1,92 @@
-import residentialCommonAreaImage from '../assets/projects/area-comum-empreendimento-residencial.jpg'
-import nossoTetoImage from '../assets/projects/conjunto-habitacional-nosso-teto-braganca-paulista.jpg'
-import hospitalAerialImage from '../assets/projects/edificacao-hospitalar-vista-aerea.jpg'
-import residentialImage from '../assets/projects/empreendimento-residencial-multifamiliar.jpg'
-import territorialStudyImage from '../assets/projects/estudos-territoriais-implantacao-urbana.jpg'
-import hospitalFacadeImage from '../assets/projects/fachada-edificacao-hospitalar.jpg'
-import sportsInfrastructureImage from '../assets/projects/infraestrutura-esportiva-ginasio.jpg'
-import hospitalRenderImage from '../assets/projects/projeto-edificacao-hospitalar-render-arquitetonico.jpg'
+import residentialCommonAreaImage from "../assets/projects/area-comum-empreendimento-residencial.jpg";
+import nossoTetoImage from "../assets/projects/conjunto-habitacional-nosso-teto-braganca-paulista.jpg";
+import hospitalAerialImage from "../assets/projects/edificacao-hospitalar-vista-aerea.jpg";
+import residentialImage from "../assets/projects/empreendimento-residencial-multifamiliar.jpg";
+import territorialStudyImage from "../assets/projects/estudos-territoriais-implantacao-urbana.jpg";
+import hospitalFacadeImage from "../assets/projects/fachada-edificacao-hospitalar.jpg";
+import sportsInfrastructureImage from "../assets/projects/infraestrutura-esportiva-ginasio.jpg";
+import hospitalRenderImage from "../assets/projects/projeto-edificacao-hospitalar-render-arquitetonico.jpg";
 
 const featuredProject = {
-  title: 'Conjunto Habitacional Nosso Teto, Bragança Paulista',
-  category: 'Experiência documentada',
+  title: "Conjunto Habitacional Nosso Teto, Bragança Paulista",
+  category: "Experiência documentada",
   description:
-    'Empreendimento habitacional com 900 casas. Após o terceiro mês de execução, a obra alcançou ritmo de seis casas por dia, apoiado pela fabricação de blocos e outros elementos pré-moldados no próprio canteiro.',
+    "Empreendimento habitacional com 900 casas. Após o terceiro mês de execução, a obra alcançou ritmo de seis casas por dia, apoiado pela fabricação de blocos e outros elementos pré-moldados no próprio canteiro.",
   image: nossoTetoImage,
-  imageAlt: 'Vista aérea do Conjunto Habitacional Nosso Teto em Bragança Paulista',
-}
+  imageAlt:
+    "Vista aérea do Conjunto Habitacional Nosso Teto em Bragança Paulista",
+};
 
 const projects = [
   {
-    title: 'Empreendimento residencial multifamiliar',
-    category: 'Edificação residencial',
+    title: "Empreendimento residencial multifamiliar",
+    category: "Edificação residencial",
     image: residentialImage,
-    imageAlt: 'Torres de empreendimento residencial multifamiliar vistas a partir da rua',
-    layout: 'sm:col-span-2 lg:col-span-2',
-    aspect: 'aspect-[16/10]',
+    imageAlt:
+      "Torres de empreendimento residencial multifamiliar vistas a partir da rua",
+    layout: "sm:col-span-2 lg:col-span-2",
+    aspect: "aspect-[16/10]",
   },
   {
-    title: 'Área comum de empreendimento residencial',
-    category: 'Espaços de convivência',
+    title: "Área comum de empreendimento residencial",
+    category: "Espaços de convivência",
     image: residentialCommonAreaImage,
-    imageAlt: 'Área comum com playground em empreendimento residencial multifamiliar',
-    layout: 'lg:row-span-2',
-    aspect: 'aspect-[4/5]',
+    imageAlt:
+      "Área comum com playground em empreendimento residencial multifamiliar",
+    layout: "lg:row-span-2",
+    aspect: "aspect-[4/5]",
   },
   {
-    title: 'Projeto de edificação hospitalar',
-    category: 'Estudo arquitetônico',
+    title: "Projeto de edificação hospitalar",
+    category: "Estudo arquitetônico",
     image: hospitalRenderImage,
-    imageAlt: 'Render arquitetônico de edificação hospitalar',
-    aspect: 'aspect-[4/3]',
+    imageAlt: "Render arquitetônico de edificação hospitalar",
+    aspect: "aspect-[4/3]",
   },
   {
-    title: 'Fachada de edificação hospitalar',
-    category: 'Infraestrutura hospitalar',
+    title: "Fachada de edificação hospitalar",
+    category: "Infraestrutura hospitalar",
     image: hospitalFacadeImage,
-    imageAlt: 'Fachada de edificação hospitalar com acesso principal',
-    aspect: 'aspect-[4/3]',
+    imageAlt: "Fachada de edificação hospitalar com acesso principal",
+    aspect: "aspect-[4/3]",
   },
   {
-    title: 'Edificação hospitalar em contexto urbano',
-    category: 'Implantação urbana',
+    title:
+      "Hospital Regional — 320 leitos, totalmente equipado e entregue em funcionamento",
+    category: "Gerenciamento operacional",
     image: hospitalAerialImage,
-    imageAlt: 'Vista aérea de edificação hospitalar em área urbana',
-    layout: 'lg:col-span-2',
-    aspect: 'aspect-[4/3]',
+    imageAlt: "Vista aérea de edificação hospitalar em área urbana",
+    layout: "lg:col-span-2",
+    aspect: "aspect-[4/3]",
   },
   {
-    title: 'Infraestrutura esportiva',
-    category: 'Equipamento de uso coletivo',
+    title: "Complexo poliesportivo",
+    category: "Projeto e execução",
     image: sportsInfrastructureImage,
-    imageAlt: 'Interior de ginásio coberto com quadra esportiva',
-    aspect: 'aspect-[4/3]',
+    imageAlt: "Interior de ginásio coberto com quadra esportiva",
+    aspect: "aspect-[4/3]",
   },
   {
-    title: 'Residencial Morada do Bosque',
-    category: 'Leitura territorial',
+    title: "Residencial Morada do Bosque",
+    category: "Projeto, execução e lançamento imobiliário",
     image: territorialStudyImage,
-    imageAlt: 'Vista aérea do Residencial Morada do Bosque e seu entorno urbano',
-    layout: 'sm:col-span-2 lg:col-span-3',
-    aspect: 'aspect-[16/10] sm:aspect-[16/7]',
-    imageClassName: 'object-[18%_82%] sm:object-[15%_88%]',
+    imageAlt:
+      "Vista aérea do Residencial Morada do Bosque e seu entorno urbano",
+    layout: "sm:col-span-2 lg:col-span-3",
+    aspect: "aspect-[16/10] sm:aspect-[16/7]",
+    imageClassName: "object-[18%_82%] sm:object-[15%_88%]",
   },
-]
+];
 
 function ProjectCard({ project }) {
   return (
     <article
-      className={`experience-project group relative isolate overflow-hidden rounded-[1.25rem] bg-brand-900 lg:h-full lg:aspect-auto ${project.layout ?? ''} ${project.aspect}`}
+      className={`experience-project group relative isolate overflow-hidden rounded-[1.25rem] bg-brand-900 lg:h-full lg:aspect-auto ${project.layout ?? ""} ${project.aspect}`}
     >
       <img
         src={project.image}
         alt={project.imageAlt}
-        className={`experience-project__image absolute inset-0 size-full object-cover ${project.imageClassName ?? ''}`}
+        className={`experience-project__image absolute inset-0 size-full object-cover ${project.imageClassName ?? ""}`}
         loading="lazy"
         decoding="async"
       />
@@ -98,12 +103,15 @@ function ProjectCard({ project }) {
         </h3>
       </div>
     </article>
-  )
+  );
 }
 
 function Experience() {
   return (
-    <section id="experiencia" className="scroll-mt-24 bg-canvas pt-20 pb-0 sm:pt-24 lg:pt-28">
+    <section
+      id="experiencia"
+      className="scroll-mt-24 bg-canvas pt-20 pb-0 sm:pt-24 lg:pt-28"
+    >
       <div className="site-container">
         <div className="text-center" data-reveal>
           <p className="text-xs font-semibold tracking-[0.16em] text-brand-700 uppercase">
@@ -113,7 +121,8 @@ function Experience() {
             Projetos que traduzem conhecimento técnico em prática.
           </h2>
           <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-muted">
-            Registros de diferentes escalas e aplicações da engenharia, apresentados com a clareza técnica que orienta a atuação da REENG.
+            Registros de diferentes escalas e aplicações da engenharia,
+            apresentados com a clareza técnica que orienta a atuação da REENG.
           </p>
         </div>
 
@@ -157,7 +166,7 @@ function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Experience
+export default Experience;

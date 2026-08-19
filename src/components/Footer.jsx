@@ -94,7 +94,7 @@ function Footer() {
           </nav>
 
           <p className="text-xs text-muted">
-            © {currentYear} REENG Projetos e Obras Limitadas. Todos os direitos reservados.
+            © {currentYear} REENG Projetos e Obras LTDA. Todos os direitos reservados.
           </p>
         </div>
       </div>
